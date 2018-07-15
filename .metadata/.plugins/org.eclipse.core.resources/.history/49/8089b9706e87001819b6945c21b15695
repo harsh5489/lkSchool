@@ -1,0 +1,19 @@
+package com.lkSchool.Welcome;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import org.springframework.web.servlet.ModelAndView;
+import org.springframework.web.servlet.mvc.AbstractController;
+
+public class Welcome extends AbstractController{
+	
+@Override
+protected ModelAndView handleRequestInternal(HttpServletRequest request,HttpServletResponse response) throws Exception
+{
+	ModelAndView modelandview =new ModelAndView("Welcome");
+	modelandview.addObject("welcomeMessage", "welcome to the school of dreams");
+	return modelandview;
+}
+
+}
